@@ -2,18 +2,21 @@ package com.drone.dronesys;
 
 public class Drone {
 
-    private String serialNo;
-    private double weightLimit;
-    private int battery;
-    private String status;
-    //class for 3d co-ord setter nd getter fr a drone
-    //...
+    private String serialNo;            // Drone serial no.
+    private double weightLimit;         // Drone max. load capacity
+    private int battery;                // Drone battery level
+    private String status;              // Drone status: Idle / Fetching / Delivering
+    private Position pos;               // Drone 2D position
+
+    private Integer itemID;             //Loaded item ID
     public Drone(String serialNo, double weightLimit, int battery, String status) {
         super();
         this.serialNo = serialNo;
         this.weightLimit = weightLimit;
         this.battery = battery;
         this.status = status;
+        pos = new Position(0,0);
+        itemID = -1;
     }
 
     public String getSerialNo() {
