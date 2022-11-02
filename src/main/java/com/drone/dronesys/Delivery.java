@@ -8,8 +8,9 @@ public class Delivery {
     private LocalDateTime deliveryReq;      // Delivery request received timestamp
     private LocalDateTime deliverAck;       // Delivery completion/status ack
 
-    private Item load;                  // Init item to be delivered
+    private Item load;                      // Init item to be delivered
 
-    Position initPos, destPos;              // Item retrieval and delivery positions
+    private Position initPos, destPos;      // Item retrieval and delivery positions
+
 
 }
